@@ -26,7 +26,10 @@ package object Random {
  * where a = 1664525, b = 1013904223, n = 32, and the inital value of previous is seed.
  */
 object Ex03 extends App {
-
-  println(Random.nextDouble())
+  Random.setSeed(1)
+  println(Random.nextInt())
+  println(Random.nextInt())
+  println(Random.nextInt())
+  println(Random.nextInt())
 
 }

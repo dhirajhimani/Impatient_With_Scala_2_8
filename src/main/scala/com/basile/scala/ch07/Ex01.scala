@@ -27,6 +27,6 @@ package com {
 
 package com.horstmann.impatient {
   class EmployeeB(val name: String) {
-    //println(Horst.name) Horst is not accessible
+//    println(Horst.name) //Horst is not accessible
   }
 }

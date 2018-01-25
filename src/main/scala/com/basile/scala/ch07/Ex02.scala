@@ -3,11 +3,11 @@ package com.basile.scala.ch07
 /**
      * Write a puzzler that baffles your Scala friends, using a package com that isn’t at the top level.
      */
-//    object Ex02 extends App {
-//      val a = 1
-//
-//      assert( _root_.com.basile.scala.ch07.Ex02.a == com.basile.scala.ch07.Ex02.a)
-//    }
+    object Ex02 extends App {
+      val a = 1
+
+      assert( _root_.com.basile.scala.ch07.Ex02.a == Ex02.a)
+    }
 
   /**
      * Write a puzzler that baffles your Scala friends, using a package com that isn’t at the top level.

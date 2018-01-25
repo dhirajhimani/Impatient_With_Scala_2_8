@@ -5,7 +5,7 @@ package com.basile.scala.ch07
  */
 object Ex07 extends App {
 
-  object javaToHashMap{
+  object javaToHashMap {
     import java.util.{HashMap => JavaHashMap}
 
     def apply[A, B](hm: JavaHashMap[A, B]) = {

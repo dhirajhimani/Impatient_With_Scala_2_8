@@ -9,5 +9,4 @@ import javax._
  */
 object Ex08 extends App {
   //Will not compile such code : lang.Boolean
-
 }
