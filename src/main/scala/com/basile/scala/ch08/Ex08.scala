@@ -1,5 +1,7 @@
 package com.basile.scala.ch08
 
+import com.basile.scala.ch08.Ex10.{Manager, Person2}
+
 /**
  * Compile the Person and SecretAgent classes in Section 8.6 , “ Overriding Fields ,” on page 89 and analyze
  * the class files with javap .

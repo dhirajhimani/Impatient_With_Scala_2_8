@@ -8,16 +8,16 @@ package com.basile.scala.ch08
  */
 object Ex10 extends App {
 
-  class Person protected(protected val name: String) {
-    def this(n: String, age: Int) {
+  case class Person2 protected(protected val name: String) {
+    def this (n: String, age: Int) {
       this(n)
     }
   }
 
-  class Manager(n: String) extends Person(n)
+  class Manager(n: String) extends Person2(n)
 
   //A protected constructor can only be accessed by an auxiliary constructor from same or descendant class
-  val P = new Person("John", 42)
+  val P = new Person2("John", 42)
   val M = new Manager("Paul")
 
 
