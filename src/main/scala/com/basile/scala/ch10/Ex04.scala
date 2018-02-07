@@ -21,6 +21,7 @@ object Ex04 extends App {
   trait CryptoLogger extends Logger {
     val key=3
     override def log(msg: String) {
+      println("current Key = " + key)
       val ceasarMsg = for(c <- msg.toUpperCase) yield c match {
         case a if 'A'<=a && a<='Z' => applyKey(a, 'A', 26)
         case a if '0'<=a && a<='9' => applyKey(a, '0', 10)

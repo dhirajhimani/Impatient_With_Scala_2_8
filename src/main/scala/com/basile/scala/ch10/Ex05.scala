@@ -50,4 +50,5 @@ object Ex05 extends App {
   P.addPropertyChangeListener("setLocation", L)
 
   P.setLocation(5, 6)
+  P.setLocation(7, 8)
 }

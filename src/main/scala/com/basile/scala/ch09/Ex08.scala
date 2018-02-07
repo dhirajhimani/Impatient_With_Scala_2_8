@@ -11,5 +11,5 @@ object Ex08 extends App {
 
   val r = """<img([^>]+)src=\"([^\"]+)""".r
 
-  for(r(a,b) <- r.findAllIn(Source.fromURL("""http://www.lemonde.fr""").mkString)) println(b)
+  for(r(a,b) <- r.findAllIn(Source.fromURL("""http://www.shakira.com""").mkString)) println(b)
 }

@@ -8,9 +8,9 @@ import java.io.PrintWriter
  */
 object Ex06 extends App {
 
-  val out = new PrintWriter("ch09-ex06.txt")
+//  val out = new PrintWriter("ch09-ex06.txt")
 
-  """\\\"""".r.findAllIn("""Hello \"Basile\" how are you ?""").foreach(out.println(_))
+  """\\"""".r.findAllIn("""Hello \"Basile\" how are you ?""").foreach(println)
 
-  out.close
+//  out.close
 }

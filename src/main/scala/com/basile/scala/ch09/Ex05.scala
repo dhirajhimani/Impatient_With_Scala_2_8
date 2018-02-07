@@ -14,8 +14,20 @@ object Ex05 extends App {
   (0 to 20).map(pow(2,_)).foreach(i => out.println("%7d   ".format(i.toInt) + 1/i))
 
   //Option
-  //for(v <- 0 to 20; p=pow(2,v)) {out.println("%7d   ".format(p.toInt) + 1/p)}
+//  for(v <- 0 to 20; p=pow(2,v)) {out.println("%7d   ".format(p.toInt) + 1/p)}
 
   out.close
+
+
+//  new PrintWriter("/Users/dhirajkumarh/Documents/Codes/scala/scala_with_impatient/my-akka-http-project/src/main/resources/ch04_ex05.txt") {
+//
+//    1.to(20).foreach(i => {
+//      var p = Math.pow(2, i)
+//      var s = "%7f".format(1/p)
+//      write(Math.pow(2, i) + "\t" + s + "\n")
+//    });
+//
+//    close
+//  }
 
 }

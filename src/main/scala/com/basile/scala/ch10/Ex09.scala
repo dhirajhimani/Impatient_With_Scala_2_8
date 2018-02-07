@@ -27,6 +27,11 @@ object Ex09 extends App {
 
   val b = new FileInputStream("README.md") with Buffering
 
-  Iterator.continually(b.read()).takeWhile(_ != -1).map(_.toChar).mkString
+//  while(b.read() != -1) {}
+
+//  Iterator.continually(b.read()).takeWhile(_ != -1).mkString
+
+  Iterator.continually(b.read()).takeWhile(_ != -1)
+    .map(_.toChar).mkString
 
 }

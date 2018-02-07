@@ -11,7 +11,8 @@ object Ex07 extends App {
 
   val url = getClass.getResource("/ch09_ex07.txt")
 
-  val r = new Regex("""^\d+?\.\d+$""")
+//  val r = new Regex("""^\d+?\.\d+$""")
+  val r = new Regex("""[0-9]+?\.[0-9]+""")
 
   val result = Source.fromURL(url).mkString.split("""\s+""").filter(r.findFirstIn(_)==None)
 
