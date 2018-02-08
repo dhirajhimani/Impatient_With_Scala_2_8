@@ -13,4 +13,14 @@ object Ex04 extends App {
 
   assert( fact(5) == 120 )
 
+
+//  def fact(num: Int) = {
+//    0.to(5).foldLeft(1)((x,y) => (x,y) match {
+//      case (x,y) if x <= 1 => 1 * y
+//      case (x,y) => x * y
+//    })
+//  }
+//
+//  fact(5)
+
 }

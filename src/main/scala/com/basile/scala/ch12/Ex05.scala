@@ -9,9 +9,11 @@ package com.basile.scala.ch12
 object Ex05 extends App {
 
   def largest(fun: (Int) => Int, inputs: Seq[Int]) = {
-    inputs.map(fun).reduceLeft((a,b) => if (a>b) a else b)
+//    inputs.map(fun).reduceLeft((a,b) => if (a>b) a else b)
+     inputs.maxBy(fun)
   }
+//  assert( largest(x => 10 * x - x * x, 1 to 10) == 25 )
+  assert( largest(x => 10 * x - x * x, 1 to 10) == 5 )
 
-  assert( largest(x => 10 * x - x * x, 1 to 10) == 25 )
 
 }
