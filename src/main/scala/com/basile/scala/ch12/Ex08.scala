@@ -10,7 +10,8 @@ object Ex08 extends App {
   val a = Array("Hello", "World")
   val b = Array(5, 4)
 
+//  assert( a.corresponds(b)(_.length==_) == false )
 
-  assert( a.corresponds(b)(_.length==_) == false )
+  assert( a.corresponds(b)((x,y) => x.length==y) == false )
 
 }

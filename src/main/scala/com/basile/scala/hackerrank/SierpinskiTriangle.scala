@@ -16,8 +16,9 @@ object SierpinskiTriangle extends App {
   def startPrinting(total_r: Int, total_c: Int, smallest_tri_r: Int, smallest_tri_c: Int) = {
     for(i <- 0.until(total_r)) {
       val total_1 = 2*i+ 1
+      val start_pos = (total_c-total_1)/2
       for(j <- 0.to(total_c - total_1)) {
-        printTriangle(j,2*i+ 1, (total_c-total_1)/2)
+        printTriangle(j, total_1, start_pos)
       }
       println()
     }

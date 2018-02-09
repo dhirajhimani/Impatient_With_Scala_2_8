@@ -16,3 +16,14 @@ object Ex09 extends App {
   assert( corresponds(a, b, (x, y) => x.length==y) == true )
 
 }
+/*
+def corresponds(a: Array[String], b: Array[Int], f: (String, Int) => Boolean): Boolean = {
+a.zip(b).filter((x) => f(x._1,x._2)).length == a.length
+}
+
+val a = Array("Hello", "World")
+val b = Array(4, 5)
+
+
+corresponds(a,b, (x,y) => x.length == y)
+ */
