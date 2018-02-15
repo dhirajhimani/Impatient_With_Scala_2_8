@@ -14,7 +14,7 @@ import FunctionalHelpers._
 object SierpinskiTriangle_1 extends App {
   import SiepinskyTriangles._
 
-  printSierpinskiTriangles(4)
+  printSierpinskiTriangles(2)
 }
 
 object SiepinskyTriangles {
@@ -27,7 +27,9 @@ object SiepinskyTriangles {
   def printSierpinskiTriangles(iterations: Int) = {
     (get(aBasicTriangle)            andThen
       splitTriangle(iterations)     andThen
+//      getAndPrint2()                andThen
       extractPointsFromTriangles     andThen
+//      getAndPrint2()                andThen
       paintPointsOnBoard(newBoard)  andThen
       printBoard)()
   }
@@ -71,4 +73,7 @@ object FunctionalHelpers {
     else repeat(f, times -1)(f(start))
   }
   def get[T](t:T): Unit => T = _ => t
+
+  def getAndPrint[T](t:T): Unit => T = _ => {println(t); t}
+  def getAndPrint2[T](): T => T = t => {println(t); t}
 }
