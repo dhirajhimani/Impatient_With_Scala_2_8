@@ -1,6 +1,6 @@
 package com.basile.scala.hackerrank
 
-object Solution4 extends App {
+object ComputeGCD extends App {
   def gcd(x: Int, y: Int): Int = {
     // You only need to fill up this function
     // To return the value of the GCD of x and y

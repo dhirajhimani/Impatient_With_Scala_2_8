@@ -15,7 +15,7 @@ package com.basile.scala.ch13
  * val frequencies: scala.collection.mutable.ConcurrentMap[Char, Int] = new java.util.concurrent.ConcurrentHashMap[Char, Int]
  */
 
-object AtomicMap {
+object AtomicMap extends App{
   import scala.io.Source
   import scala.collection.JavaConversions.mapAsScalaConcurrentMap
   import java.util.concurrent.atomic.AtomicInteger
@@ -24,7 +24,7 @@ object AtomicMap {
 
   val frequencies: scala.collection.concurrent.Map[Char, AtomicInteger] = new java.util.concurrent.ConcurrentHashMap[Char, AtomicInteger]
 
-  val files = Array("a.csv", "b.csv")
+  val files = Array("ch04_ex02.txt", "ch04_ex03.txt")
 
   files.foreach {	f =>
     new Thread {
@@ -49,7 +49,7 @@ object Ex09 extends App {
   import scala.io.Source
 
   //val files = Array("a.csv", "b.csv") 25195 17836 43031
-  val files = Array("a.csv", "b.csv")
+  val files = Array("ch04_ex02.txt", "ch04_ex03.txt")
 
   val frequencies = new scala.collection.mutable.HashMap[Char, Int] with scala.collection.mutable.SynchronizedMap[Char, Int]
 
@@ -70,6 +70,6 @@ object Ex09 extends App {
   //Both files contains 43031 'e' and this script return 42228 because of transaction issue
 
   //AtomicMap return the good value
-  AtomicMap
+//  AtomicMap
 }
 

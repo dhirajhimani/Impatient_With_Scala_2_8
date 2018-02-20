@@ -18,14 +18,20 @@ object Ex10 extends App {
   import scala.collection.immutable.HashMap
 
 
-  val str = Source.fromURL(getClass.getResource("/a.csv"), "UTF-8").getLines.mkString
+  val str = Source.fromURL(getClass.getResource("/ch04_ex02.txt"), "UTF-8").getLines.mkString
 
-  val result = str.par.aggregate(HashMap[Char, Int]())(
+  val frequencies = new scala.collection.mutable.HashMap[Char, Int]
+  for (c <- str.par)
+   frequencies(c) = frequencies.getOrElse(c, 0) + 1
+
+  println(frequencies('e'))
+
+  val result = str.par.aggregate(Map[Char, Int]())(
     (m, c) =>  m + (c -> (m.getOrElse(c, 0) + 1)),
     (m1, m2) => m1 ++ m2.map{ case (k,v) => k -> (v + m1.getOrElse(k, 0)) }
   )
-
-  assert( result('e') == 25195 )
+  println(result('e'))
+//  assert( result('e') == 25195 )
 
 
 
