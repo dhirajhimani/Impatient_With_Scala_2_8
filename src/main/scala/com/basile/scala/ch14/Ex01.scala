@@ -32,6 +32,9 @@ object Ex01 extends App {
 
     val str = Source.fromFile(f.toString, "ISO-8859-1").getLines.mkString
 
+//    rf.findAllIn(str).foreach({ x => if (!x.isEmpty) println(x) })
+//    println("-----------------------")
+    rc.findAllIn(str).foreach({ x => if (!x.isEmpty) println(x) })
     cf += rf.findAllIn(str).length
     cc += rc.findAllIn(str).length
   }

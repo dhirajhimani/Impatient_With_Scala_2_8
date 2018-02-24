@@ -6,8 +6,20 @@ package com.basile.scala.ch14
  */
 object Ex03 extends App {
 
-  def swap(a: Array[Int]) = a match { case Array(a, b, end @ _*) => Array(b, a) ++ end }
+  def swap(a: Array[Int]) = {
+//    println(a.isDefinedAt(0))
+    a match {
+            case Array(a) => Array(a)
+      //      case Array(a, b) => Array(b, a)
+      case Array(a, b, end@_*) => Array(b, a) ++ end
+      //      case Array(a, b, end @ _*) => Array(b, a, end)
+    }
 
-  assert( swap(Array(1,2,3,4)).deep == Array(2,1,3,4).deep )
+  }
+
+  println(swap(Array(1)).mkString(" "))
+  println(swap(Array(1,2)).mkString(" "))
+  println(swap(Array(1,2,3,4)).mkString(" "))
+//  assert( swap(Array(1,2,3,4)).deep == Array(2,1,3,4).deep )
 
 }

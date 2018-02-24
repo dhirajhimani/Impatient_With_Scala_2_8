@@ -10,6 +10,9 @@ import scala.annotation.elidable._
        0: iconst_0
        1: ireturn
  */
+
+// Use command scalac -Xelide-below MAXIMUM Ex10.scala
+// than scala Ex10
 object Ex10 extends App {
 
   @elidable(ALL) def factorial(n: Int): Int = {

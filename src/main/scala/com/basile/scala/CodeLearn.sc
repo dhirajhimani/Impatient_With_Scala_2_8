@@ -1,12 +1,11 @@
+val lines = List("asdf", "zxcv")
 
-import scala.collection.JavaConversions.mapAsScalaConcurrentMap
-import java.util.concurrent.atomic.AtomicInteger
+val temp = "asdf";
+temp.scanLeft(temp)((t,x)=> {println(x); t.tail + t.head})
 
-val frequencies: scala.collection.concurrent.Map[Char, AtomicInteger] = new java.util.concurrent.ConcurrentHashMap[Char, AtomicInteger]
 
-val zero = new AtomicInteger(0)
-frequencies.put('5', zero).getOrElse(zero)
-frequencies.put('5', new AtomicInteger(1)).get
-frequencies.put('5', new AtomicInteger(2)).get
-frequencies.put('5', new AtomicInteger(3)).get
-frequencies
+
+println(lines.map(
+  x => x.scanLeft(x)(
+    (t,_)=>t.tail + t.head).drop(1).mkString(" "))
+  .mkString("\n"))

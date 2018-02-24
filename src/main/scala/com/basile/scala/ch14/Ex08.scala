@@ -16,13 +16,14 @@ object Ex08 extends App {
 
   def eval(bt: BinaryTree): Int = bt match {
     case Node('+', bts @ _*) => bts.map(eval).sum
-    case Node('-', bts @ _*) => bts.map(eval).foldLeft(0)(_ - _)
+    case Node('-', bts @ _*) => bts.map(eval).foldLeft(0)((x,y) => {println(x + " " + y); x - y})
     case Node('*', bts @ _*) => bts.map(eval).product
     case Leaf(value) => value
     case _ => 0
   }
 
-  assert( eval(n) == 21)
+  println(eval(n))
+//  assert( eval(n) == 21)
 
 
 }

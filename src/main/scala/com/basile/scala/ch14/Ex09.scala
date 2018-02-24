@@ -7,7 +7,13 @@ object Ex09 extends App {
 
   val l:List[Option[Int]] = List(Some(1), Some(2), None, Some(4))
 
-  def sum(l: List[Option[Int]]): Int = (for(Some(v) <- l) yield v).sum
+  def sum(l: List[Option[Int]]): Int = {
+    (for(Some(v) <- l) yield v).sum
+//    l.map( _ match {
+//      case Some(v) => v
+//      case None => 0
+//    }).sum
+  }
 
   assert( sum(l) == 7 )
 

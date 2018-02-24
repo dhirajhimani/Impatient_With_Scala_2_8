@@ -18,5 +18,7 @@ lazy val root = (project in file(".")).
       "com.typesafe.akka" %% "akka-testkit"         % akkaVersion     % Test,
       "com.typesafe.akka" %% "akka-stream-testkit"  % akkaVersion     % Test,
       "org.scalatest"     %% "scalatest"            % "3.0.1"         % Test
-    )
-  )
+    ),
+      libraryDependencies += "com.novocode" % "junit-interface" % "0.8" % "test->default"
+
+)

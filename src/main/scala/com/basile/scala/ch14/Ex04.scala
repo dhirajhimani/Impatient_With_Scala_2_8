@@ -21,7 +21,11 @@ object Ex04 extends App {
       Article("Goldfinger", 6.00)
     ),
     Multiple(2,
-      Article("Thunderbolt", 7.00)
+      Article("Thunderbolt", 7.00),
+      Bundle("DVD pack", 2.0,
+        Article("Dr No", 4.00),
+        Article("Goldfinger", 6.00)
+      )
     )
   )
 
@@ -31,6 +35,7 @@ object Ex04 extends App {
     case Article(_, p) => p
   }
 
-  assert( price(m) == 220.0 )
+  println(price(m))
+  assert( price(m) == 380.0 )
 
 }

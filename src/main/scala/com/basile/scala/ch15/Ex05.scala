@@ -12,7 +12,10 @@ class Ex05 {
   @throws(classOf[IOException]) def fileToString(file: String): String = {
     val url = getClass.getResource(file)
 
-    if (url == null) throw new IOException("File not found") else Source.fromURL(url).mkString
+    if (url == null)
+      throw new IOException("File not found")
+    else
+      Source.fromURL(url).mkString
   }
 
 }

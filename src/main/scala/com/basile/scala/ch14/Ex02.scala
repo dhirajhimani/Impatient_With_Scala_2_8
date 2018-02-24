@@ -6,7 +6,8 @@ package com.basile.scala.ch14
  */
 object Ex02 extends App {
 
-  def swap(p: (Int,Int)): (Int, Int) = p match { case (x, y) => (y, x) }
+//  def swap(p: (Int,Int)): (Int, Int) = p match { case (x, y) => (y, x) }
+  def swap(p: (Int,Int)): (Int, Int) = (p._2, p._1)
 
   assert( swap(1, 2) == (2, 1))
 
