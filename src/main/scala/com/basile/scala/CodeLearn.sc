@@ -1,11 +1,5 @@
-val lines = List("asdf", "zxcv")
+val seq = (1,2,3,4)
 
-val temp = "asdf";
-temp.scanLeft(temp)((t,x)=> {println(x); t.tail + t.head})
+seq.copy(_1=5)
+seq
 
-
-
-println(lines.map(
-  x => x.scanLeft(x)(
-    (t,_)=>t.tail + t.head).drop(1).mkString(" "))
-  .mkString("\n"))
