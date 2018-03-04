@@ -25,6 +25,7 @@ object Ex09 extends App {
       <p>
         <img src="http://www.imageB.fr" alt="imageB" />
       </p>
+      <p><![CDATA[Cdata <section>]]></p>
     </body>
   </html>"""
 

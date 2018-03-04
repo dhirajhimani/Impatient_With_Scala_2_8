@@ -1,6 +1,6 @@
 package com.basile.scala.ch16
 
-import scala.xml.Elem
+import scala.xml.{Elem, Text}
 
 /**
  * Write a function that has a parameter of type Map[String, String]
@@ -11,7 +11,7 @@ import scala.xml.Elem
 object Ex07 extends App {
 
   def mapToDl(m: Map[String, String]):Elem = {
-    <dl>{ for ((k,v) <- m) yield <dt>{k}</dt><dd>{v}</dd> }</dl>
+    <dl>{ for ((k,v) <- m) yield <dt>{Text(k)}</dt><dd>{Text(v)}</dd> }</dl>
   }
 
 }

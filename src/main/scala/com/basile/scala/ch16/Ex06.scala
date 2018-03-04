@@ -32,7 +32,7 @@ object Ex06 extends App {
   (doc \\ "a").foreach{
     n => {
       tr = tr.copy(child = tr.child ++ <td>{n}</td>)
-      println(n \\ "@href")
+      println(n \ "@href")
     }
   }
 
