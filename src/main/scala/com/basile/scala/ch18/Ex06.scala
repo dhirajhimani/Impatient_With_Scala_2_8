@@ -13,7 +13,7 @@ object Ex06 extends App {
 
   def getClosestValue(s: SortedSet[Int], value: Int): Int Either Int = {
 
-    s.zipWithIndex.collectFirst{
+    s.zipWithIndex.collectFirst {
       case (`value`, i) => Left(i)
       case (v, i) if v > value => Right(i)
     }.getOrElse(Right(s.size - 1))

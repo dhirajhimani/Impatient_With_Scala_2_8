@@ -41,10 +41,10 @@ object Ex05 extends App {
   def processB(m1: NetworkMember, m2: NetworkMember) = (m1, m2)
 
   processA(Basile, John)
-  //processA(Basile, Alfred) will not compile because Network is defined once for the two parameters
+//  processA(Basile, Alfred)// will not compile because Network is defined once for the two parameters
 
-  //n.Member forSome {val n: Network}
-  processB(Basile, John)
-  processB(Basile, Alfred)
+//  n.Member forSome {val n: Network}
+//  processB(Basile, John) // This is right, try in RPEL or worksheet, Intellij is dumb
+//  processB(Basile, Alfred)
 
 }

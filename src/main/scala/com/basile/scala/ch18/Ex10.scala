@@ -36,19 +36,19 @@ object Ex10 extends App {
   }
 
 
-  trait TopComponent1
-    extends Service1Component
-    with Service2Component
+//  trait TopComponent1
+//    extends Service1Component
+//    with Service2Component
 
-  trait TopComponent2
-    extends Service2Component
-    with Service1Component
+//  trait TopComponent2
+//    extends Service2Component
+//    with Service1Component
 
   //Works
-  val a = new {} with TopComponent1 with Service1ComponentImpl with Service2ComponentImpl
+  val a = new {} with Service1ComponentImpl with Service2ComponentImpl
 
   //Throw java.lang.NullPointerException
-  val b = new {} with TopComponent2 with Service2ComponentImpl with Service1ComponentImpl
+  val b = new {}  with Service2ComponentImpl with Service1ComponentImpl
 
 
 }

@@ -25,12 +25,12 @@ object Ex07 extends App {
   }
 
   class Door {
+    def open() {println("Door is opened")}
     def close() {println("Door is closed")}
   }
 
   val myDoor = new Door
 
   new Closable().add(myDoor)
-
 
 }
