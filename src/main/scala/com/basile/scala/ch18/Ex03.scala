@@ -13,16 +13,16 @@ object Ex03 extends App {
   class Document {
     var title: String = _
     var author: String = _
-    var useNextArgAs: Any = null
+    var useNextArgAs: Any = _
 
-    def set(obj: Title.type) = {
+    def set(obj: Any) = {
       useNextArgAs = obj
       this
     }
-    def set(obj: Author.type) = {
-      useNextArgAs = obj
-      this
-    }
+//    def set(obj: Author.type) = {
+//      useNextArgAs = obj
+//      this
+//    }
     def to(s: String) = {
       useNextArgAs match {
         case Title => title = s

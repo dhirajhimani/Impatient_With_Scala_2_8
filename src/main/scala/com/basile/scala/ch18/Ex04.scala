@@ -9,6 +9,11 @@ import scala.collection.mutable.ArrayBuffer
  */
 object Ex04 extends App {
 
+  class A {
+    override def equals(obj:Any):Boolean = {
+      true
+    }
+  }
 
   class Network {
     class Member(val name: String) {
@@ -33,6 +38,8 @@ object Ex04 extends App {
   val Alfred = NetworkB.join("Alfred")
 
   assert(Basile.equals(Alfred) == false)
-  assert(Basile.equals(John) == true)
+  assert(Basile.equals(John) == true) // here the catch is the Member object are different for both network, when the equals method is called for same Network the overrided method calls up, but for diff n/w the parent equals method is called up.
+
+
 
 }

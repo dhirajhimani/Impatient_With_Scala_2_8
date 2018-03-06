@@ -20,4 +20,12 @@ object Ex08 extends App {
   //Because I can't add a super type of T in my Pair it will begin a Pair[Supertype]
   //Mutable class are invariant
 
+//  class Pair[+T](val first: T, val second: T) { // not val here in book its var
+//
+//  }
+
+  class Pair[+T](val first: T, val second: T) {
+//    def replaceFirst(newFirst: T) = new Pair[T](newFirst, second) // Error
+    def replaceFirst[TT >: T](newFirst: TT) = new Pair[TT](newFirst, second)
+  }
 }

@@ -6,7 +6,9 @@ package com.basile.scala.ch17
  * Why is it in a covariant position in these methods?
  */
 object Ex07 extends App {
-  /*
+  //
+  // A -> B -> C
+  //
   class A
   class B extends A
   class C extends B
@@ -20,9 +22,12 @@ object Ex07 extends App {
   needsB(printB, new B)
   needsB(printA, new B) // sub function of needsB(printB, new B)
 
-  //needsB(printC, new B) => won't compile
+//  needsB(printC, new B)// => won't compile, B is not C or a supertype of it. Funcitons are contravariant in their argument.
 
-  */
+//  needsB(printB, new A)// => won't compile
+  needsB(printB, new B)
+  needsB(printB, new C)
+
 
   class Person(val name: String)
   class Student(name: String) extends Person(name)
@@ -38,6 +43,7 @@ object Ex07 extends App {
   val testStudent: (Student) => Boolean = s => s.name.contains('l')
 
   println(itS.dropWhile(testPerson))
+//  println(itP.dropWhile(testStudent))// => won't compile
 
   //No methods received the type A and returns A
 

@@ -9,21 +9,21 @@ package com.basile.scala.ch17
  * Then construct the call replaceFirst("Hello") on a Pair[Any] that is actually a NastyDoublePair .
  */
 object Ex09 extends App {
-/*
-  class Pair[+T](val first: T, val second: T) {
-    def replaceFirst(newFirst:T) = new Pair[T](newFirst, second)
-  }
-
-  class NastyDoublePair(first: Double, second: Double) extends Pair[Double](first, second) {
-    override def replaceFirst(newFirst: Double) = new NastyDoublePair(scala.math.sqrt(newFirst), second)
-  }
-
-  val myNasty: Pair[Any] = new NastyDoublePair(4.5 , 4.5)
-
-  val myNewNasty = myNasty.replaceFirst("hello")
-
-  println(myNewNasty.first)
+//
+//  class Pair[+T](val first: T, val second: T) {
+//    def replaceFirst[TT >: T](newFirst: TT) = new Pair[TT](newFirst, second)
+//  }
+//
+//  class NastyDoublePair(first: Double, second: Double) extends Pair[Double](first, second) {
+//    override def replaceFirst(newFirst: Double) = new NastyDoublePair(scala.math.sqrt(newFirst), second)
+//  }
+//
+//  val myNasty: Pair[Any] = new NastyDoublePair(4.5 , 4.5)
+//
+//  val myNewNasty = myNasty.replaceFirst("hello")
+//
+//  println(myNewNasty.first)
 
   //If compiling this code will be incoherent
-*/
+
 }

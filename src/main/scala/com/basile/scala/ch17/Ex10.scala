@@ -16,7 +16,7 @@ object Ex10 extends App {
   }
 
 
-  //(new Pair("hello", 28)).swap => won't compile
+//  (new Pair("hello", 28)).swap// => won't compile
   (new Pair("hello", "world")).swap
 
 

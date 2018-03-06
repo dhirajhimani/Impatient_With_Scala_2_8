@@ -23,4 +23,13 @@ object Ex04 extends App {
   val pairB = pairA.replaceFirst(studA)
 
   //Because Student is already a Person
+
+  val studB = new Student
+  val studC = new Student
+
+  val pairC  = new Pair(studB, studC)
+
+//  val pairD = pairC.replaceFirst(pairA)
+
+
 }
