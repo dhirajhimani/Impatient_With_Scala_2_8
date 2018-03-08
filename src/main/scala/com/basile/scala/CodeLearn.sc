@@ -1,2 +1,0 @@
-val a = new {}
-a
